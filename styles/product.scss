@@ -1,1 +1,116 @@
-$fontsize:1.75rem;
+$font28:1.75rem;
+$font26:1.625rem;
+$font22:1.375rem;
+$font18:1.125rem;
+$font14:0.875rem;
+$color1:#00a0e2;
+$color2:#ff3000;
+$color3:#222;
+$color4:#fff;
+$weight:700;
+
+// wrap 1200, big 500, small 150
+
+main { width: 1200px; margin: 0 auto; background: beige;
+    .path {margin-bottom: 20px;
+        dd {
+            display: flex;
+            flex-flow: row nowrap;
+        align-items: center;
+            a {        color: $color1;
+                em {font-weight: $weight;}
+            }
+            /* a::after {
+                content:''; display: inline-block;
+                width:24px; height:24px;
+                position:relative; top:6px;
+                background:url(../images/navigate_next.png)}
+                a:last-child::after{display:none;}
+                */
+            img {}
+        }
+    }
+    #order {
+/*         display: grid;
+        grid-template-columns: repeat(2,1fr); */
+        display:flex; justify-content: space-between;
+        .product_img { /* width:50px; background:aqua; */
+            .big {width:500px;
+                img {width:100%;}
+            }
+            .thum {
+                width:500px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                margin-top: 20px;
+                /* margin-top:15px; display:flex; justify-content:space-between */
+                a {width:150px; /* height:150px; overflow:hidden; */
+                    img {width:100%;}
+                }
+            }
+        }
+        .order_contents {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            width:calc(100% - 550px); background: yellow; 
+            h1 {font-weight: $weight; font-size: $font28;}
+            h1+p {/* padding:10px 0; */}
+            p {font-size: $font14;
+                del {font-size: $font22;}
+            }
+            .price {font-weight: $weight; font-size: $font26;}
+            .deliver {
+                border-top: 1px solid $color3;
+                padding-top: 20px;
+                em {font-weight: $weight; margin-right: 15px;}
+            }
+            h2 {font-weight: $weight; font-size: $font22;}
+            #brands {padding:10px; margin-top: -10px; /* width:100%; border:1px solid $color3;*/
+                option {}
+            }
+            #galaxy {padding:10px; margin-top: -10px;
+                option {}
+            }
+            #iphone {padding:10px; margin-top: -10px;
+                option {}
+            }
+            .order_list {
+                /* display:grid;
+                align-items:center;
+                grid-template-columns: 1fr 50px 50px 150px; */
+                border-top: 1px solid $color3;
+                border-bottom: 1px solid $color3;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .order_product {
+                    .color {margin-bottom: 5px; font-size: $font14;}
+                    .model {font-size: $font14;}
+                }
+                #order_num {width:40px; height:30px; border:none; margin-right: -145px; padding-left: 5px;}
+                #cancel {margin-right: -140px;
+                    img {}
+                }
+                em {font-weight: $weight; /* text-align:right; */
+                    span {font-weight: $weight; font-size: $font18;}
+                }
+            }
+            .total {margin: -15px 0 0;
+                h2 {font-weight: $weight;}
+                .total {}
+            }
+            .btn {display: flex; justify-content: space-between;
+                /* display:grid; grid-template-columns:repeat(3,32%);
+                justify-content: space-between; */
+                #buy {}
+                #cart {}
+                #wish {}
+                button {img{width:100%;} width:32%;}
+            }
+        }
+    }
+    .btm {display: none;}
+}
